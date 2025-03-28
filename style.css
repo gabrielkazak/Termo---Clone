@@ -1,0 +1,248 @@
+body{
+    background-color: #6E5C62;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    font-family: 'Mitr', sans-serif;
+}
+
+.titulo{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    margin-top: 5px;
+}
+
+/*Grid de letras*/
+#tentativas_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    z-index: -1;
+    position: relative;
+}
+
+.tentativa_row{
+    margin-bottom: 4px;
+    display: flex;
+}
+
+.tentativa_missplace{
+    background-color: #D3AD69;
+    border: 5px solid #D3AD69;
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    margin: 0 1px 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.tentativa_placed{
+    background-color: #3AA394;
+    border: 5px solid #3AA394;
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    margin: 0 1px 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.tentativa_wrong{
+    background-color: #312A2C;
+    border: 5px solid #312A2C;
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    margin: 0 1px 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.tentativa_row.ativa .tentativa{
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    border: 5px solid #4C4347;
+    border-radius: 8px;
+    margin: 0 1px 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.tentativa{
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    background-color: #615458;
+    border: 5px solid #615458;
+    border-radius: 8px;
+    margin: 0 1px 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+
+/*Teclado*/
+.botao{
+    font-family: "Mitr";
+    font-size: 32px;
+    border: none;
+    background-color: #4C4347;
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 1px;
+}
+
+.botao_apagado{
+    font-family: "Mitr";
+    font-size: 32px;
+    border: none;
+    background-color: #5d5155;
+    color:  #77646a;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 1px;
+}
+
+.botao_placed{
+    font-family: "Mitr";
+    font-size: 32px;
+    border: none;
+    background-color:#3AA394;
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 1px;
+}
+
+.botao_missplace{
+    font-family: "Mitr";
+    font-size: 32px;
+    border: none;
+    background-color:#D3AD69;
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 1px;
+}
+
+#keyboard_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.keyboard_row{
+    margin-bottom: 8px;
+}
+
+#enter{
+    width: fit-content;
+}
+#backspace{
+    width: fit-content;
+    font-weight: bold;
+}
+
+/*Tela de vitoria*/
+#overlay {
+    position: fixed; /* Cobre toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.577);  /* Fundo escuro semi-transparente */
+    z-index: 10; /* Abaixo do card */
+    display: none; /* Inicialmente escondido */
+}
+
+#card_final{
+    z-index: 20;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: #5d5155;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#texto_final{
+    color: white;
+    font-size: 32px;
+}
+
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
